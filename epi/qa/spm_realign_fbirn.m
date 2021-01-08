@@ -514,7 +514,8 @@ error('Insufficient image overlap.');
 % mriq modification %
 % function plot_parameters(P)
 function Params = plot_parameters(P)
-fg = spm_figure('FindWin','Graphics');
+% fg = spm_figure('FindWin','Graphics'); % commented spm_figure is closed by default, find give error 
+fg = spm_figure();
 if isempty(fg), return; end
 
 P = cat(1,P{:});
