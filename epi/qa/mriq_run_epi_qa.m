@@ -239,7 +239,7 @@ rNinim = Ninim;
 if size(Ninim,1)>1
     % REALIGN
     flags1 = struct('quality',1,'fwhm',5,'sep',4,'interp',2,'wrap',[0 0 0],'rtm',0,'PW','','graphics',1,'lkp',2);
-    [rNinim, Params] = spm_realign_fbirn(Ninim,flags1);
+    [rNinim, Params] = spm_realign_fbirn_ss(Ninim,flags1);
     
     % RESLICE
     flags2 = struct('interp',4,'mask',1,'mean',1,'which',2,'wrap',[0 0 0]');
